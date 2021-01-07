@@ -281,20 +281,13 @@
 .article_ingredients_instructions .source {
   width: 100%;
   margin-top: 56px;
-  line-height: 23px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-weight: 600;
 }
 
 @media screen and (max-width: 700px) {
   .article_ingredients_instructions .source {
     width: auto;
-    font-size: 14px;
+    font-size: 12px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -308,13 +301,6 @@
   color: #BDBDBD;
   margin-left: 5px;
   text-decoration: none;
-}
-
-@media screen and (max-width: 700px) {
-  .article_ingredients_instructions .source a {
-    font-size: 12px;
-    line-height: 15px;
-  }
 }
 
 .article_ingredients_instructions .source a:hover {
