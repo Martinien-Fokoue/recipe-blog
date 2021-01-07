@@ -1,0 +1,360 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text_capitalize {
+    text-transform: capitalize;
+}
+
+.text_uppercase {
+    text-transform: uppercase;
+}
+
+.text_italic {
+    font-style: italic;
+}
+
+.container {
+    max-width: 75%;
+    margin: 52px auto;
+
+    @media screen and (max-width: 700px){
+        min-width: 95%;
+        margin: 30px auto 32px;
+    }
+}
+
+.header {
+    
+    & .header_title {
+        font-size: 48px;
+        font-family: "PlayFair Display";
+        @media screen and (max-width: 700px){
+            font-size: 25px;
+        }
+    }
+
+    & .description {
+        font-family: Montserrat;
+        font-size: 14px;
+        display: flex;
+        align-items: flex-start;
+        color: #4F4F4F;
+        margin-top: 12px;
+        @media screen and (max-width: 700px){
+            font-size: 12px;
+            line-height: 17px;
+        }
+
+        & .dots {
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+        & .text {
+            width: 592px;
+            @media screen and (max-width: 700px){
+                width: auto;
+            }
+        }
+    }
+
+    & .header_image {
+        width: 100%;
+        margin: 48px 0;
+        @media screen and (max-width: 700px){
+            margin: 24px 0;
+        }
+    }
+}
+
+.container > section {
+    font-family: Montserrat;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    // border: 2px solid green;
+
+    @media screen and (max-width: 700px){
+       width: 100%;
+       flex-direction: column-reverse;
+    }
+}
+
+.article_ingredients_instructions {
+    width: 70%;
+    margin-right: 50px;
+
+    @media screen and (max-width: 700px){
+        width: 100%;
+    }
+
+    & .ingredients {
+        @media screen and (max-width: 700px){
+            // border: 2px solid blue;
+        }
+        & .title {
+            font-family: "Playfair Display";
+            font-size: 24px;
+            font-weight: 700;
+            @media screen and (max-width: 700px){
+                font-size: 18px;
+                width: max-content;
+            }
+        }
+
+        & .ingredient {
+            margin-bottom: 30px;
+            @media screen and (max-width: 700px){
+                font-size: 14px;
+            }
+
+            & .article_subTitle {
+                font-family: "Playfair Display";
+                font-size: 18px;
+                font-weight: 400;
+                margin: 32px 0 30px;
+                @media screen and (max-width: 700px){
+                    font-size: 16px;
+                    margin: 32px 0 20px;
+                }
+            }
+
+            & .details {
+                display: grid;
+                grid-template-columns: 1fr 99%;
+                margin: 10px 0;
+                position: relative;
+                @media screen and (max-width: 700px){
+                    // border: 2px solid red;
+                    margin: 20px 0;
+                }
+
+
+                & input {
+                    position: absolute;
+                    z-index: -10;
+                    left: 2px;
+                }
+                & input:checked + .box {
+                    background-color: #F2994A;
+                    border: 1px solid #F2994A;
+                    
+                }
+                & .box {
+                    width: 21px;
+                    height: 21px;
+                    border-radius: 4px;
+                    border: 1px solid #828282;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #FFF;
+
+                    & svg {
+                        fill: #FFF;
+                    }
+                }
+
+                & p {
+                    line-height: 22px;
+                    width: 92%;
+
+                    @media screen and (max-width: 700px){
+                        // border: 2px solid green;
+                        // width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    & .instructions {
+
+        width: 100%;
+        margin-top: 30px;
+        @media screen and (max-width: 700px){
+        }
+
+        & .title {
+            font-size: 24px;
+            font-family: "Playfair Display";
+            margin-bottom: 46px;
+            @media screen and (max-width: 700px){
+                margin: 10px 0 30px;
+            }
+        }
+
+        & .details {
+
+            display: grid;
+            grid-template-columns: 1fr 92%;
+            margin-bottom: 40px;
+            @media screen and (max-width: 700px){
+                margin-bottom: 30px;
+            }
+
+            & .box_number {
+                margin-right: 15px;
+                width: 36px;
+                height: 36px;
+                border-radius: 4px;
+                font-size: 24px;
+                color: #FFF;
+                font-weight: 700;
+                background: #F2994A;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Playfair Display";
+            }
+
+            & p {
+                line-height: 24px;
+                font-size: 16px;
+                width: 90%;
+                @media screen and (max-width: 700px){
+                    width: 87%;
+                    font-size: 15px;
+                }
+            }
+
+        }
+    }
+
+    & .source {
+        width: 100%;
+        margin-top: 56px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        @media screen and (max-width: 700px){
+            width: auto;
+            font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        & a {
+            font-weight: 400;
+            color: #BDBDBD;
+            margin-left: 5px;
+            text-decoration: none;
+            @media screen and (max-width: 700px){
+               font-size: 12px;
+                line-height: 15px;
+            }
+            
+            &:hover {
+                color: #F2994A;
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.preparation_time {
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: .1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 216px;
+    height: 367px;
+    // border: 2px solid green;
+
+    @media screen and (max-width: 700px){
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        box-shadow: none;
+        margin-bottom: 32px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-content: flex-start;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 20px;
+    }
+
+    & .group {
+        display: flex;
+        align-items: center;
+        width: 125px;
+        @media screen and (max-width: 700px){
+            width: auto;
+
+            &:nth-child(2), &:nth-child(3), &:nth-child(4){
+                grid-row-start: 2;
+            }
+        }
+
+
+        &:first-child {
+
+            & svg {
+                fill: #F2994A;
+            }
+
+            & .infos .time {
+                color: #F2994A;
+            }
+        }
+
+
+        & svg {
+            width: 28px;
+            height: 28px;
+            @media screen and (max-width: 700px){
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        & .infos {
+            margin-left: 14px;
+            @media screen and (max-width: 700px){
+                margin-left: 4px;
+            }
+            & .title {
+                font-size: 10px;
+                color: #BDBDBD;
+                font-weight: 700;
+                margin-bottom: 4px;
+                @media screen and (max-width: 700px){
+                    font-size: 8px;
+                    margin-bottom: 2px;
+                }
+            }
+
+            & .time {
+                font-size: 14px;
+                color: #333;
+                font-weight: 600;
+                @media screen and (max-width: 700px){
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+.attribution {
+    text-align: center;
+    margin-top: 100px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    color: #a9a9a9;
+
+    & a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
